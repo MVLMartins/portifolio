@@ -1,0 +1,8 @@
+exemple_lazzy_dag_{id}:
+  description: "This task will take 5 minits to execute"
+  tasks:
+    task_1:
+      operator: airflow.operators.python_operator.PythonOperator
+      python_callable_name: lazzy_function
+      python_callable_file: /opt/airflow/dags/tasks_function_utils/lazzy_task_42.py
+
